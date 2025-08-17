@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - SMK Taman Maluri</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .form-container {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .form__input, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form__input:focus, select:focus {
+      outline: none;
+      border-color: #ffd700;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(45deg, darkgoldenrod, #ffd700);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    @media screen and (max-width: 768px) {
+      .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo">SMK Taman Maluri</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">Utama</a>
+        </li>
+        <li class="navbar__item">
+          <a href="sejarah.html" class="navbar__links">Sejarah</a>
+        </li>  
+        <li class="btn">
+          <a href="Daftar.html" class="button">Daftar</a>
+        </li>  
+      </ul>
+    </div>
+  </nav>
+
+  <div class="form-container">
+    <h1>Daftar Pelajar Baru</h1>
+    
+    <form>
+      <div class="form-group">
+        <label for="name">Nama Penuh</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Masukkan nama penuh"
+          autocomplete="off"
+          class="form__input"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="tingkatan">Pilih Tingkatan</label>
+        <select id="tingkatan" required>
+          <option value="">Pilih Tingkatan</option>
+          <option value="1">Tingkatan 1</option>
+          <option value="2">Tingkatan 2</option>
+          <option value="3">Tingkatan 3</option>
+          <option value="4">Tingkatan 4</option>
+          <option value="5">Tingkatan 5</option>
+          <option value="6">Tingkatan 6</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="kelas">Pilih Kelas</label>
+        <select id="kelas" required>
+          <option value="">Pilih Kelas</option>
+          <option value="inspirasi">Inspirasi</option>
+          <option value="ikhlas">Ikhlas</option>
+          <option value="intelek">Intelek</option>
+          <option value="integriti">Integriti</option>
+          <option value="inovatif">Inovatif</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Hantar Permohonan</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+  
